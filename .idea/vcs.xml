@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/ext/glog" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/ext/openexr" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/ext/ptex" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/ext/zlib" vcs="Git" />
+  </component>
+</project>

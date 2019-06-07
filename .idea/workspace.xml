@@ -1,0 +1,668 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="PBRT-V3" targetName="eLut" />
+      <config projectName="PBRT-V3" targetName="Experimental" />
+      <config projectName="PBRT-V3" targetName="ExperimentalBuild" />
+      <config projectName="PBRT-V3" targetName="ContinuousSubmit" />
+      <config projectName="PBRT-V3" targetName="ftest" />
+      <config projectName="PBRT-V3" targetName="IlmImf-obj" />
+      <config projectName="PBRT-V3" targetName="ExperimentalMemCheck" />
+      <config projectName="PBRT-V3" targetName="ContinuousStart" />
+      <config projectName="PBRT-V3" targetName="pbrt_test" />
+      <config projectName="PBRT-V3" targetName="NightlyMemCheck" />
+      <config projectName="PBRT-V3" targetName="ptxinfo" />
+      <config projectName="PBRT-V3" targetName="ExperimentalUpdate" />
+      <config projectName="PBRT-V3" targetName="bsdftest" />
+      <config projectName="PBRT-V3" targetName="toFloat" />
+      <config projectName="PBRT-V3" targetName="glog" />
+      <config projectName="PBRT-V3" targetName="ContinuousMemCheck" />
+      <config projectName="PBRT-V3" targetName="NightlySubmit" />
+      <config projectName="PBRT-V3" targetName="Imath" />
+      <config projectName="PBRT-V3" targetName="Nightly" />
+      <config projectName="PBRT-V3" targetName="halftest" />
+      <config projectName="PBRT-V3" targetName="logging_unittest" />
+      <config projectName="PBRT-V3" targetName="IlmImf" />
+      <config projectName="PBRT-V3" targetName="Half" />
+      <config projectName="PBRT-V3" targetName="NightlyConfigure" />
+      <config projectName="PBRT-V3" targetName="ExperimentalTest" />
+      <config projectName="PBRT-V3" targetName="obj2pbrt" />
+      <config projectName="PBRT-V3" targetName="b44ExpLogTable" />
+      <config projectName="PBRT-V3" targetName="dwaLookups" />
+      <config projectName="PBRT-V3" targetName="rtest" />
+      <config projectName="PBRT-V3" targetName="ExperimentalCoverage" />
+      <config projectName="PBRT-V3" targetName="NightlyBuild" />
+      <config projectName="PBRT-V3" targetName="imgtool" />
+      <config projectName="PBRT-V3" targetName="NightlyCoverage" />
+      <config projectName="PBRT-V3" targetName="IlmThread" />
+      <config projectName="PBRT-V3" targetName="ExperimentalStart" />
+      <config projectName="PBRT-V3" targetName="ContinuousTest" />
+      <config projectName="PBRT-V3" targetName="symbolize_unittest" />
+      <config projectName="PBRT-V3" targetName="ContinuousCoverage" />
+      <config projectName="PBRT-V3" targetName="pbrt" />
+      <config projectName="PBRT-V3" targetName="ContinuousBuild" />
+      <config projectName="PBRT-V3" targetName="Continuous" />
+      <config projectName="PBRT-V3" targetName="signalhandler_unittest" />
+      <config projectName="PBRT-V3" targetName="Iex" />
+      <config projectName="PBRT-V3" targetName="IexMath" />
+      <config projectName="PBRT-V3" targetName="pbrt_exe" />
+      <config projectName="PBRT-V3" targetName="stacktrace_unittest" />
+      <config projectName="PBRT-V3" targetName="ContinuousUpdate" />
+      <config projectName="PBRT-V3" targetName="stl_logging_unittest" />
+      <config projectName="PBRT-V3" targetName="demangle_unittest" />
+      <config projectName="PBRT-V3" targetName="utilities_unittest" />
+      <config projectName="PBRT-V3" targetName="CopyIlmBaseLibs" />
+      <config projectName="PBRT-V3" targetName="cyhair2pbrt" />
+      <config projectName="PBRT-V3" targetName="NightlyTest" />
+      <config projectName="PBRT-V3" targetName="NightlyUpdate" />
+      <config projectName="PBRT-V3" targetName="Ptex_static" />
+      <config projectName="PBRT-V3" targetName="ExperimentalConfigure" />
+      <config projectName="PBRT-V3" targetName="ExperimentalSubmit" />
+      <config projectName="PBRT-V3" targetName="NightlyMemoryCheck" />
+      <config projectName="PBRT-V3" targetName="NightlyStart" />
+      <config projectName="PBRT-V3" targetName="wtest" />
+      <config projectName="PBRT-V3" targetName="ContinuousConfigure" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Release" CONFIG_NAME="Release" GENERATION_DIR="$PROJECT_DIR$/../build_dir" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="774ebb14-fef8-4a85-af94-86c4b8fbe3e6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/accelerators/bvh.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/accelerators/bvh.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/accelerators/bvh.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/accelerators/bvh.h" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
+    <ignored path="$PROJECT_DIR$/../build_dir/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Release" />
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/accelerators/bvh.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="528" column="9" lean-forward="true" selection-start-line="528" selection-start-column="9" selection-end-line="528" selection-end-column="9" />
+              <folding>
+                <element signature="e#1502#1531#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/accelerators/bvh.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="683">
+              <caret line="95" lean-forward="true" selection-start-line="95" selection-end-line="95" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/core/api.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="668" column="27" lean-forward="true" selection-start-line="668" selection-start-column="27" selection-end-line="668" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/scenes/killeroo-distance.pbrt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>makeAcce</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/accelerators/bvh.h" />
+        <option value="$PROJECT_DIR$/scenes/killeroo-distance.pbrt" />
+        <option value="$PROJECT_DIR$/src/accelerators/bvh.cpp" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-1" />
+    <option name="width" value="961" />
+    <option name="height" value="1053" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="PBRT-V3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pbrt-v3_PCA-BVH" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PBRT-V3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pbrt-v3_PCA-BVH" type="462c0819:PsiDirectoryNode" />
+              <item name="scenes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PBRT-V3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pbrt-v3_PCA-BVH" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PBRT-V3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pbrt-v3_PCA-BVH" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="accelerators" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PBRT-V3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pbrt-v3_PCA-BVH" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/scenes" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.pbrt_exe">
+    <configuration name="Continuous" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="Continuous" CONFIG_NAME="Release">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ContinuousBuild" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="ContinuousBuild" CONFIG_NAME="Release" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="ContinuousBuild">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ContinuousConfigure" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="ContinuousConfigure" CONFIG_NAME="Release" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="ContinuousConfigure">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ContinuousCoverage" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="ContinuousCoverage" CONFIG_NAME="Release" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="ContinuousCoverage">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ContinuousMemCheck" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="ContinuousMemCheck" CONFIG_NAME="Release" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="ContinuousMemCheck">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ContinuousStart" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="ContinuousStart" CONFIG_NAME="Release" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="ContinuousStart">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ContinuousSubmit" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="ContinuousSubmit" CONFIG_NAME="Release" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="ContinuousSubmit">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ContinuousTest" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="ContinuousTest" CONFIG_NAME="Release" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="ContinuousTest">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ContinuousUpdate" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="ContinuousUpdate" CONFIG_NAME="Release" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="ContinuousUpdate">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CopyIlmBaseLibs" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="CopyIlmBaseLibs" CONFIG_NAME="Release">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Experimental" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="Experimental" CONFIG_NAME="Release">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExperimentalBuild" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="ExperimentalBuild" CONFIG_NAME="Release" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="ExperimentalBuild">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExperimentalConfigure" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="ExperimentalConfigure" CONFIG_NAME="Release" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="ExperimentalConfigure">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExperimentalCoverage" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="ExperimentalCoverage" CONFIG_NAME="Release" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="ExperimentalCoverage">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExperimentalMemCheck" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="ExperimentalMemCheck" CONFIG_NAME="Release" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="ExperimentalMemCheck">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExperimentalStart" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="ExperimentalStart" CONFIG_NAME="Release" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="ExperimentalStart">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExperimentalSubmit" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="ExperimentalSubmit" CONFIG_NAME="Release" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="ExperimentalSubmit">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExperimentalTest" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="ExperimentalTest" CONFIG_NAME="Release" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="ExperimentalTest">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExperimentalUpdate" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="ExperimentalUpdate" CONFIG_NAME="Release" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="ExperimentalUpdate">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Half" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="Half" CONFIG_NAME="Release">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Iex" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="Iex" CONFIG_NAME="Release">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IexMath" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="IexMath" CONFIG_NAME="Release">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IlmImf-obj" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="IlmImf-obj" CONFIG_NAME="Release">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IlmImf" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="IlmImf" CONFIG_NAME="Release">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IlmThread" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="IlmThread" CONFIG_NAME="Release">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Imath" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="Imath" CONFIG_NAME="Release">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Nightly" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="Nightly" CONFIG_NAME="Release">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NightlyBuild" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="NightlyBuild" CONFIG_NAME="Release" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="NightlyBuild">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NightlyConfigure" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="NightlyConfigure" CONFIG_NAME="Release" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="NightlyConfigure">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NightlyCoverage" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="NightlyCoverage" CONFIG_NAME="Release" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="NightlyCoverage">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NightlyMemCheck" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="NightlyMemCheck" CONFIG_NAME="Release" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="NightlyMemCheck">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NightlyMemoryCheck" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="NightlyMemoryCheck" CONFIG_NAME="Release" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="NightlyMemoryCheck">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NightlyStart" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="NightlyStart" CONFIG_NAME="Release" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="NightlyStart">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NightlySubmit" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="NightlySubmit" CONFIG_NAME="Release" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="NightlySubmit">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NightlyTest" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="NightlyTest" CONFIG_NAME="Release" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="NightlyTest">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NightlyUpdate" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="NightlyUpdate" CONFIG_NAME="Release" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="NightlyUpdate">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Ptex_static" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="Ptex_static" CONFIG_NAME="Release">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="b44ExpLogTable" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="b44ExpLogTable" CONFIG_NAME="Release" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="b44ExpLogTable">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="bsdftest" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="bsdftest" CONFIG_NAME="Release" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="bsdftest">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="cyhair2pbrt" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="cyhair2pbrt" CONFIG_NAME="Release" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="cyhair2pbrt">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="demangle_unittest" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="demangle_unittest" CONFIG_NAME="Release" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="demangle_unittest">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="dwaLookups" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="dwaLookups" CONFIG_NAME="Release" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="dwaLookups">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="eLut" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="eLut" CONFIG_NAME="Release" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="eLut">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ftest" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="ftest" CONFIG_NAME="Release" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="ftest">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="glog" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="glog" CONFIG_NAME="Release">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="halftest" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="halftest" CONFIG_NAME="Release" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="halftest">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="imgtool" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="imgtool" CONFIG_NAME="Release" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="imgtool">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="logging_unittest" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="logging_unittest" CONFIG_NAME="Release" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="logging_unittest">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="obj2pbrt" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="obj2pbrt" CONFIG_NAME="Release" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="obj2pbrt">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="pbrt" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="pbrt" CONFIG_NAME="Release">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="pbrt_exe" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="pbrt_exe" CONFIG_NAME="Release" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="pbrt_exe">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="pbrt_test" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="pbrt_test" CONFIG_NAME="Release" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="pbrt_test">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ptxinfo" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="ptxinfo" CONFIG_NAME="Release" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="ptxinfo">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="rtest" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="rtest" CONFIG_NAME="Release" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="rtest">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="signalhandler_unittest" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="signalhandler_unittest" CONFIG_NAME="Release" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="signalhandler_unittest">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="stacktrace_unittest" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="stacktrace_unittest" CONFIG_NAME="Release" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="stacktrace_unittest">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="stl_logging_unittest" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="stl_logging_unittest" CONFIG_NAME="Release" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="stl_logging_unittest">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="symbolize_unittest" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="symbolize_unittest" CONFIG_NAME="Release" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="symbolize_unittest">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="toFloat" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="toFloat" CONFIG_NAME="Release" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="toFloat">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="utilities_unittest" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="utilities_unittest" CONFIG_NAME="Release" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="utilities_unittest">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="wtest" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PBRT-V3" TARGET_NAME="wtest" CONFIG_NAME="Release" RUN_TARGET_PROJECT_NAME="PBRT-V3" RUN_TARGET_NAME="wtest">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.bsdftest" />
+      <item itemvalue="Application.cyhair2pbrt" />
+      <item itemvalue="Application.imgtool" />
+      <item itemvalue="Application.obj2pbrt" />
+      <item itemvalue="Application.pbrt" />
+      <item itemvalue="Application.pbrt_exe" />
+      <item itemvalue="Application.pbrt_test" />
+      <item itemvalue="Application.demangle_unittest" />
+      <item itemvalue="Application.glog" />
+      <item itemvalue="Application.logging_unittest" />
+      <item itemvalue="Application.signalhandler_unittest" />
+      <item itemvalue="Application.stacktrace_unittest" />
+      <item itemvalue="Application.stl_logging_unittest" />
+      <item itemvalue="Application.symbolize_unittest" />
+      <item itemvalue="Application.utilities_unittest" />
+      <item itemvalue="Application.CopyIlmBaseLibs" />
+      <item itemvalue="Application.eLut" />
+      <item itemvalue="Application.Half" />
+      <item itemvalue="Application.toFloat" />
+      <item itemvalue="Application.Iex" />
+      <item itemvalue="Application.IexMath" />
+      <item itemvalue="Application.IlmThread" />
+      <item itemvalue="Application.Imath" />
+      <item itemvalue="Application.b44ExpLogTable" />
+      <item itemvalue="Application.dwaLookups" />
+      <item itemvalue="Application.IlmImf" />
+      <item itemvalue="Application.IlmImf-obj" />
+      <item itemvalue="Application.Continuous" />
+      <item itemvalue="Application.ContinuousBuild" />
+      <item itemvalue="Application.ContinuousConfigure" />
+      <item itemvalue="Application.ContinuousCoverage" />
+      <item itemvalue="Application.ContinuousMemCheck" />
+      <item itemvalue="Application.ContinuousStart" />
+      <item itemvalue="Application.ContinuousSubmit" />
+      <item itemvalue="Application.ContinuousTest" />
+      <item itemvalue="Application.ContinuousUpdate" />
+      <item itemvalue="Application.Experimental" />
+      <item itemvalue="Application.ExperimentalBuild" />
+      <item itemvalue="Application.ExperimentalConfigure" />
+      <item itemvalue="Application.ExperimentalCoverage" />
+      <item itemvalue="Application.ExperimentalMemCheck" />
+      <item itemvalue="Application.ExperimentalStart" />
+      <item itemvalue="Application.ExperimentalSubmit" />
+      <item itemvalue="Application.ExperimentalTest" />
+      <item itemvalue="Application.ExperimentalUpdate" />
+      <item itemvalue="Application.Nightly" />
+      <item itemvalue="Application.NightlyBuild" />
+      <item itemvalue="Application.NightlyConfigure" />
+      <item itemvalue="Application.NightlyCoverage" />
+      <item itemvalue="Application.NightlyMemCheck" />
+      <item itemvalue="Application.NightlyMemoryCheck" />
+      <item itemvalue="Application.NightlyStart" />
+      <item itemvalue="Application.NightlySubmit" />
+      <item itemvalue="Application.NightlyTest" />
+      <item itemvalue="Application.NightlyUpdate" />
+      <item itemvalue="Application.Ptex_static" />
+      <item itemvalue="Application.ftest" />
+      <item itemvalue="Application.halftest" />
+      <item itemvalue="Application.rtest" />
+      <item itemvalue="Application.wtest" />
+      <item itemvalue="Application.ptxinfo" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="774ebb14-fef8-4a85-af94-86c4b8fbe3e6" name="Default Changelist" comment="" />
+      <created>1559305338785</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1559305338785</updated>
+      <workItem from="1559305340266" duration="260000" />
+      <workItem from="1559305602400" duration="4081000" />
+      <workItem from="1559406980514" duration="331000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="4672000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-1" y="0" width="1922" height="1053" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25506938" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32975295" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Database Changes" order="7" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.32975295" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32975295" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="11" />
+      <window_info anchor="bottom" id="CMake" order="12" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="make" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/accelerators/bvh.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="528" column="9" lean-forward="true" selection-start-line="528" selection-start-column="9" selection-end-line="528" selection-end-column="9" />
+          <folding>
+            <element signature="e#1502#1531#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/accelerators/bvh.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="683">
+          <caret line="95" lean-forward="true" selection-start-line="95" selection-end-line="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core/api.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="668" column="27" lean-forward="true" selection-start-line="668" selection-start-column="27" selection-end-line="668" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scenes/killeroo-distance.pbrt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
