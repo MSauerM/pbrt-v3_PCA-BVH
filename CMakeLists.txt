@@ -2,7 +2,7 @@
 # (https://www.slideshare.net/DanielPfeifer1/cmake-48475415) are violated
 # in this file. Would be nice to address some of these.
 
-CMAKE_MINIMUM_REQUIRED ( VERSION 2.8.4 )
+CMAKE_MINIMUM_REQUIRED ( VERSION 3.0.0 )
 
 # For sanitizers
 SET (CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake" ${CMAKE_MODULE_PATH})
@@ -447,7 +447,7 @@ SET ( PBRT_CORE_HEADERS
   src/core/stringprint.h
   src/core/texture.h
   src/core/transform.h
-        src/accelerators/bvh_pca.cpp src/accelerators/bvh_pca.h)
+        src/accelerators/bvh_pca.cpp src/accelerators/bvh_pca.h example.cpp)
 
 FILE ( GLOB PBRT_SOURCE
   src/ext/*
@@ -556,6 +556,16 @@ TARGET_COMPILE_FEATURES ( pbrt_test PRIVATE ${PBRT_CXX11_FEATURES} )
 TARGET_LINK_LIBRARIES ( pbrt_test ${ALL_PBRT_LIBS} )
 
 ADD_TEST ( pbrt_unit_test pbrt_test )
+
+# Include Eigen-Library with CMake
+
+#cmake_minimum_required (VERSION 3.0)
+#project (myproject)
+
+#find_package (Eigen3 3.3 REQUIRED NO_MODULE)
+#add_executable (example example.cpp)
+#target_link_libraries (example Eigen3::Eigen)
+
 
 # Installation
 
