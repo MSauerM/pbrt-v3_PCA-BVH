@@ -11,7 +11,7 @@ Film "image"
 #	"float cropwindow" [ .34 .49  .67 .8 ]
 
 Sampler "halton" "integer pixelsamples" [8]
-Accelerator "bvh" "string splitmethod" "distance"
+Accelerator "pcabvh" "string splitmethod" "middle"
 Integrator "path"
 
 WorldBegin
