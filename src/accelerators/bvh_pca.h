@@ -22,7 +22,7 @@ namespace pbrt{
         enum class SplitMethod {SAH, Middle};
 
         PCAAccel(std::vector<std::shared_ptr<Primitive>> p, int maxPrimsInNode = 1,
-                SplitMethod splitMethod = SplitMethod::Middle);
+                SplitMethod splitMethod = SplitMethod::Middle, bool isOptimized=false);
 
         Bounds3f WorldBound() const;
         ~PCAAccel();

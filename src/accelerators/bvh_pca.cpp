@@ -6,6 +6,7 @@
 #include "bvh_pca.h"
 #include "interaction.h"
 #include "paramset.h"
+#include <eigen3/Eigen/Dense>
 #include <parallel.h>
 #include <algorithm>
 #include <iostream>
@@ -24,10 +25,12 @@ namespace pbrt{
         BVHPrimitiveInfo(size_t primitiveNumber, const Bounds3f &bounds)
                 : primitiveNumber(primitiveNumber),
                   bounds(bounds),
-                  centroid(.5f * bounds.pMin + .5f * bounds.pMax) {}
+                  centroid(.5f * bounds.pMin + .5f * bounds.pMax),
+                  pcacentroid(centroid){}
         size_t primitiveNumber;
         Bounds3f bounds;
         Point3f centroid;
+        Point3f pcacentroid;
     };
 
     struct BVHBuildNode{
@@ -76,9 +79,10 @@ namespace pbrt{
     };
 
     PCAAccel::PCAAccel(std::vector<std::shared_ptr<pbrt::Primitive>> p, int maxPrimsInNode,
-                       pbrt::PCAAccel::SplitMethod splitMethod) :
+                       pbrt::PCAAccel::SplitMethod splitMethod, bool isOptimized) :
                             maxPrimsInNode(std::min(255, maxPrimsInNode)),
-                            splitMethod(splitMethod),primitives(std::move(p))
+                            splitMethod(splitMethod),
+                            primitives(std::move(p))
                             {
                                 ProfilePhase _(Prof::AccelConstruction);
                                 if (primitives.empty()) return;
@@ -95,8 +99,9 @@ namespace pbrt{
                                 orderedPrims.reserve(primitives.size());
                                 BVHBuildNode *root;
 
+
                                 // Überführe die BVHPrimitives zu PCA Primitives (PCA wird also genau einmal ausgeführt)
-                                std::vector<PCAPrimitiveInfo> pcaPrimitiveInfo(primitives.size());
+                                //std::vector<PCAPrimitiveInfo> pcaPrimitiveInfo(primitives.size());
 
                                 // Calculate the Mean
 
@@ -109,24 +114,51 @@ namespace pbrt{
 
                                 // Multiplikation der verschiedenen BVHPrimitive mit der Transformationsmatrix für die
                                 for (int j = 0; j < primitives.size() ; ++j) {
-                                    pcaPrimitiveInfo[j] = {j, primitiveInfo[j].centroid-mean }; // TODO: Subtract the mean and multiplicate the Centroid
+//                                    pcaPrimitiveInfo[j] = {j, primitiveInfo[j].centroid-mean }; // TODO: Subtract the mean and multiplicate the Centroid
+                                    primitiveInfo[j].pcacentroid-= mean;
                                 }
 
                                 // PCA-Eigenvektoren ermitteln
 
-                                // Transformationsmatrix (3x3) erstellen
-                                Matrix4x4 matrix = Matrix4x4();                         // ToDo: Layout rausfinden
                                 // Making magical transformationstuff
+                                Eigen::MatrixXf centeredPrimMidpoints = Eigen::MatrixXf(primitives.size(),3);
 
-
-
-                                //
                                 for (int l = 0; l < primitives.size() ; ++l) {
-                                  //  pcaPrimitiveInfo[l].centroid *= matrix;
+                                  centeredPrimMidpoints(l,0) = primitiveInfo[l].pcacentroid.x;
+                                  centeredPrimMidpoints(l,1) = primitiveInfo[l].pcacentroid.y;
+                                  centeredPrimMidpoints(l,2) = primitiveInfo[l].pcacentroid.z;
+                                }
+
+                                Eigen::MatrixXf covarianceMatrix = centeredPrimMidpoints.adjoint() * centeredPrimMidpoints;
+                                covarianceMatrix = covarianceMatrix / (centeredPrimMidpoints.rows()-1);
+
+                                Eigen::SelfAdjointEigenSolver<Eigen::MatrixXf> eigen(covarianceMatrix);
+                               // Eigen::VectorXf normalizedEigenValues = eigen.eigenvalues()/ eigen.eigenvalues().sum();
+
+                                Eigen::MatrixXf eigenVectors = eigen.eigenvectors();
+                                Eigen::MatrixXf pcaTransformationMatrix = eigenVectors.rightCols(3);
+
+                                centeredPrimMidpoints = centeredPrimMidpoints * pcaTransformationMatrix;
+
+                                for (int m = 0; m < primitiveInfo.size(); ++m) {
+                                    primitiveInfo[m].pcacentroid = Point3f( centeredPrimMidpoints(m,0),centeredPrimMidpoints(m,1),centeredPrimMidpoints(m,2));
+                              //      std::cout << primitiveInfo[m].pcacentroid;
+                                }
+
+                                // ToDo: PcaPrimitiveInfo muss auch an recursiveBuild() übergeben werden
+
+                                if(isOptimized){
+                                    // ToDo: Early Split Clipping implementieren
                                 }
 
                                 // Beim Recursive Build müssten auch die PCAPrimitives übergeben werden
                                 root = recursiveBuild(arena, primitiveInfo, 0, primitives.size(), &totalNodes, orderedPrims);
+
+                                if(isOptimized){
+                                    // ToDo: Fast insertion based Optimizations for Bounding Volume Hierarchies
+                                }
+
+
 
                                 sumSAH = CalculateCost(root);
 
@@ -189,7 +221,7 @@ namespace pbrt{
             // Compute bound of primitive centroids, choose split dimension _dim_
             Bounds3f centroidBounds;
             for (int i = start; i < end; ++i)
-                centroidBounds = Union(centroidBounds, primitiveInfo[i].centroid);
+                centroidBounds = Union(centroidBounds, primitiveInfo[i].pcacentroid);
             int dim = centroidBounds.MaximumExtent();
 
             // Partition primitives into two sets and build children
@@ -215,7 +247,7 @@ namespace pbrt{
                         BVHPrimitiveInfo *midPtr = std::partition(
                                 &primitiveInfo[start], &primitiveInfo[end - 1] + 1,
                                 [dim, pmid](const BVHPrimitiveInfo &pi) {
-                                    return pi.centroid[dim] < pmid;
+                                    return pi.pcacentroid[dim] < pmid;
                                 });
                         mid = midPtr - &primitiveInfo[0];
 
@@ -233,7 +265,7 @@ namespace pbrt{
                                              &primitiveInfo[end - 1] + 1,
                                              [dim](const BVHPrimitiveInfo &a,
                                                    const BVHPrimitiveInfo &b) {
-                                                 return a.centroid[dim] < b.centroid[dim];
+                                                 return a.pcacentroid[dim] < b.pcacentroid[dim];
                                              });
 
                             break;
@@ -249,8 +281,8 @@ namespace pbrt{
                                              &primitiveInfo[end - 1] + 1,
                                              [dim](const BVHPrimitiveInfo &a,
                                                    const BVHPrimitiveInfo &b) {
-                                                 return a.centroid[dim] <
-                                                        b.centroid[dim];
+                                                 return a.pcacentroid[dim] <
+                                                        b.pcacentroid[dim];
                                              });
                         } else {
                             // Allocate _BucketInfo_ for SAH partition buckets
@@ -261,7 +293,7 @@ namespace pbrt{
                             for (int i = start; i < end; ++i) {
                                 int b = nBuckets *
                                         centroidBounds.Offset(
-                                                primitiveInfo[i].centroid)[dim];
+                                                primitiveInfo[i].pcacentroid)[dim];
                                 if (b == nBuckets) b = nBuckets - 1;
                                 CHECK_GE(b, 0);
                                 CHECK_LT(b, nBuckets);
@@ -307,7 +339,7 @@ namespace pbrt{
                                         &primitiveInfo[start], &primitiveInfo[end - 1] + 1,
                                         [=](const BVHPrimitiveInfo &pi) {
                                             int b = nBuckets *
-                                                    centroidBounds.Offset(pi.centroid)[dim];
+                                                    centroidBounds.Offset(pi.pcacentroid)[dim];
                                             if (b == nBuckets) b = nBuckets - 1;
                                             CHECK_GE(b, 0);
                                             CHECK_LT(b, nBuckets);
@@ -456,7 +488,8 @@ namespace pbrt{
         }
 
         int maxPrimsInNode = ps.FindOneInt("maxnodeprims",4);
-        return std::make_shared<PCAAccel>(std::move(prims),maxPrimsInNode, splitMethod);
+        bool isOptimized = ps.FindOneBool( "optimized", false);
+        return std::make_shared<PCAAccel>(std::move(prims),maxPrimsInNode, splitMethod, isOptimized);
     }
 /*
     int getPrimitiveCount(BVHBuildNode* node){
