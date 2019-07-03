@@ -19,6 +19,7 @@ namespace pbrt{
     STAT_COUNTER("BVH/Leaf nodes", leafNodes);
     STAT_COUNTER("BVH/Traversal Steps", traversalSteps);
     STAT_RATIO("BVH/Average SAH", sumSAH, totalSplits);
+    
 
     struct BVHPrimitiveInfo{
         BVHPrimitiveInfo(){}
@@ -105,45 +106,8 @@ namespace pbrt{
 
                                 // Calculate the Mean
 
-                                Point3f middle = Point3f();
-                                for (int k = 0; k < primitives.size(); ++k) {
-                                    middle += primitiveInfo[k].centroid;
-                                }
-                                middle = middle / primitives.size();
-                                Vector3f mean = Vector3f(middle);
 
                                 // Multiplikation der verschiedenen BVHPrimitive mit der Transformationsmatrix für die
-                                for (int j = 0; j < primitives.size() ; ++j) {
-//                                    pcaPrimitiveInfo[j] = {j, primitiveInfo[j].centroid-mean }; // TODO: Subtract the mean and multiplicate the Centroid
-                                    primitiveInfo[j].pcacentroid-= mean;
-                                }
-
-                                // PCA-Eigenvektoren ermitteln
-
-                                // Making magical transformationstuff
-                                Eigen::MatrixXf centeredPrimMidpoints = Eigen::MatrixXf(primitives.size(),3);
-
-                                for (int l = 0; l < primitives.size() ; ++l) {
-                                  centeredPrimMidpoints(l,0) = primitiveInfo[l].pcacentroid.x;
-                                  centeredPrimMidpoints(l,1) = primitiveInfo[l].pcacentroid.y;
-                                  centeredPrimMidpoints(l,2) = primitiveInfo[l].pcacentroid.z;
-                                }
-
-                                Eigen::MatrixXf covarianceMatrix = centeredPrimMidpoints.adjoint() * centeredPrimMidpoints;
-                                covarianceMatrix = covarianceMatrix / (centeredPrimMidpoints.rows()-1);
-
-                                Eigen::SelfAdjointEigenSolver<Eigen::MatrixXf> eigen(covarianceMatrix);
-                               // Eigen::VectorXf normalizedEigenValues = eigen.eigenvalues()/ eigen.eigenvalues().sum();
-
-                                Eigen::MatrixXf eigenVectors = eigen.eigenvectors();
-                                Eigen::MatrixXf pcaTransformationMatrix = eigenVectors.rightCols(3);
-
-                                centeredPrimMidpoints = centeredPrimMidpoints * pcaTransformationMatrix;
-
-                                for (int m = 0; m < primitiveInfo.size(); ++m) {
-                                    primitiveInfo[m].pcacentroid = Point3f( centeredPrimMidpoints(m,0),centeredPrimMidpoints(m,1),centeredPrimMidpoints(m,2));
-                              //      std::cout << primitiveInfo[m].pcacentroid;
-                                }
 
                                 // ToDo: PcaPrimitiveInfo muss auch an recursiveBuild() übergeben werden
 
@@ -218,6 +182,48 @@ namespace pbrt{
             node->InitLeaf(firstPrimOffset, nPrimitives, bounds);
             return node;
         } else {
+
+            Point3f middle = Point3f();
+            for (int k = start; k < end; ++k) {
+                middle += primitiveInfo[k].pcacentroid;
+            }
+            middle = middle / (end-start);
+            Vector3f mean = Vector3f(middle);
+
+            for (int j = start; j < end ; ++j) {
+//                                    pcaPrimitiveInfo[j] = {j, primitiveInfo[j].centroid-mean }; // TODO: Subtract the mean and multiplicate the Centroid
+                primitiveInfo[j].pcacentroid-= mean;
+            }
+
+            // PCA-Eigenvektoren ermitteln
+
+            // Making magical transformationstuff
+            Eigen::MatrixXf centeredPrimMidpoints = Eigen::MatrixXf(end-start,3);
+
+            for (int l = start; l < end ; ++l) {
+                centeredPrimMidpoints(l-start,0) = primitiveInfo[l].pcacentroid.x;
+                centeredPrimMidpoints(l-start,1) = primitiveInfo[l].pcacentroid.y;
+                centeredPrimMidpoints(l-start,2) = primitiveInfo[l].pcacentroid.z;
+            }
+
+            Eigen::MatrixXf covarianceMatrix = centeredPrimMidpoints.adjoint() * centeredPrimMidpoints;
+            covarianceMatrix = covarianceMatrix / (centeredPrimMidpoints.rows()-1);
+
+            Eigen::SelfAdjointEigenSolver<Eigen::MatrixXf> eigen(covarianceMatrix);
+            // Eigen::VectorXf normalizedEigenValues = eigen.eigenvalues()/ eigen.eigenvalues().sum();
+
+            Eigen::MatrixXf eigenVectors = eigen.eigenvectors();
+            Eigen::MatrixXf pcaTransformationMatrix = eigenVectors.rightCols(3);
+
+            centeredPrimMidpoints = centeredPrimMidpoints * pcaTransformationMatrix;
+
+            for (int m = start; m < end; ++m) {
+                primitiveInfo[m].pcacentroid = Point3f( centeredPrimMidpoints(m-start,0),centeredPrimMidpoints(m-start,1),centeredPrimMidpoints(m-start,2));
+                //      std::cout << primitiveInfo[m].pcacentroid;
+            }
+
+
+
             // Compute bound of primitive centroids, choose split dimension _dim_
             Bounds3f centroidBounds;
             for (int i = start; i < end; ++i)
