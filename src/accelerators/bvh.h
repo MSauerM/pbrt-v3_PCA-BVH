@@ -97,7 +97,7 @@ class BVHAccel : public Aggregate {
 std::shared_ptr<BVHAccel> CreateBVHAccelerator(
     std::vector<std::shared_ptr<Primitive>> prims, const ParamSet &ps);
 
-float CalculateCost(BVHBuildNode* currentNode);
+    double CalculateCost(BVHBuildNode* currentNode);
 
 
 }  // namespace pbrt

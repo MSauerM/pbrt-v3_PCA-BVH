@@ -47,7 +47,7 @@ namespace pbrt{
     std::shared_ptr<PCAAccel> CreatePCAAccelerator(
             std::vector<std::shared_ptr<Primitive>> prims, const ParamSet &ps);
 
-    float CalculateCost(BVHBuildNode* currentNode);
+    double CalculateCost(BVHBuildNode* currentNode);
 
 
 

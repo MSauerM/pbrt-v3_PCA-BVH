@@ -212,7 +212,7 @@ namespace pbrt {
         else
             root = recursiveBuild(arena, primitiveInfo, 0, primitives.size(),
                                   &totalNodes, orderedPrims);
-        sumSAH = CalculateCost(root);
+        sumSAH += CalculateCost(root);
         primitives.swap(orderedPrims);
         primitiveInfo.resize(0);
         LOG(INFO) << StringPrintf("BVH created with %d nodes for %d "
@@ -911,9 +911,9 @@ namespace pbrt {
 
     }
 
-    float CalculateCost(BVHBuildNode* currentNode){
+    double CalculateCost(BVHBuildNode* currentNode){
 
-        float cost = 0;
+        double cost = 0;
         if(currentNode->children[0] == nullptr ||  currentNode->children[1] == nullptr){
             return 0;
         }
@@ -934,7 +934,12 @@ namespace pbrt {
 
         cost += CalculateCost(currentNode->children[0]);
         cost += CalculateCost(currentNode->children[1]);
-        return cost;
+        if(isNaN(cost)){
+            return 0;
+        } else{
+            return cost;
+        }
+
     }
 
 

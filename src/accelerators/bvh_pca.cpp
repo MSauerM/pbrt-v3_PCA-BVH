@@ -111,20 +111,19 @@ namespace pbrt{
 
                                 // ToDo: PcaPrimitiveInfo muss auch an recursiveBuild() übergeben werden
 
-                                if(isOptimized){
+                            //    if(isOptimized){
                                     // ToDo: Early Split Clipping implementieren
-                                }
+                            //    }
 
-                                // Beim Recursive Build müssten auch die PCAPrimitives übergeben werden
                                 root = recursiveBuild(arena, primitiveInfo, 0, primitives.size(), &totalNodes, orderedPrims);
 
-                                if(isOptimized){
+                            //    if(isOptimized){
                                     // ToDo: Fast insertion based Optimizations for Bounding Volume Hierarchies
-                                }
+                            //    }
 
 
 
-                                sumSAH = CalculateCost(root);
+                                sumSAH += CalculateCost(root);
 
                                 primitives.swap(orderedPrims);
                                 primitiveInfo.resize(0);
@@ -191,13 +190,9 @@ namespace pbrt{
             Vector3f mean = Vector3f(middle);
 
             for (int j = start; j < end ; ++j) {
-//                                    pcaPrimitiveInfo[j] = {j, primitiveInfo[j].centroid-mean }; // TODO: Subtract the mean and multiplicate the Centroid
                 primitiveInfo[j].pcacentroid-= mean;
             }
 
-            // PCA-Eigenvektoren ermitteln
-
-            // Making magical transformationstuff
             Eigen::MatrixXf centeredPrimMidpoints = Eigen::MatrixXf(end-start,3);
 
             for (int l = start; l < end ; ++l) {
@@ -206,11 +201,9 @@ namespace pbrt{
                 centeredPrimMidpoints(l-start,2) = primitiveInfo[l].pcacentroid.z;
             }
 
-            Eigen::MatrixXf covarianceMatrix = centeredPrimMidpoints.adjoint() * centeredPrimMidpoints;
-            covarianceMatrix = covarianceMatrix / (centeredPrimMidpoints.rows()-1);
+            Eigen::MatrixXf covarianceMatrix = (centeredPrimMidpoints.adjoint() * centeredPrimMidpoints) / (centeredPrimMidpoints.rows()-1);
 
             Eigen::SelfAdjointEigenSolver<Eigen::MatrixXf> eigen(covarianceMatrix);
-            // Eigen::VectorXf normalizedEigenValues = eigen.eigenvalues()/ eigen.eigenvalues().sum();
 
             Eigen::MatrixXf eigenVectors = eigen.eigenvectors();
             Eigen::MatrixXf pcaTransformationMatrix = eigenVectors.rightCols(3);
@@ -219,7 +212,6 @@ namespace pbrt{
 
             for (int m = start; m < end; ++m) {
                 primitiveInfo[m].pcacentroid = Point3f( centeredPrimMidpoints(m-start,0),centeredPrimMidpoints(m-start,1),centeredPrimMidpoints(m-start,2));
-                //      std::cout << primitiveInfo[m].pcacentroid;
             }
 
 
