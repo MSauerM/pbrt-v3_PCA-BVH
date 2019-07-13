@@ -289,16 +289,16 @@ namespace pbrt{
                             PBRT_CONSTEXPR int nBuckets = 12;
                             BucketInfo buckets[nBuckets];
 
-                            Bounds3f classiccentroidBounds;
+                            Bounds3f classicCentroidBounds;
                             for (int i = start; i < end; ++i)
-                                classiccentroidBounds = Union(classiccentroidBounds, primitiveInfo[i].centroid);
-                            int classicdim = classiccentroidBounds.MaximumExtent();
+                                classicCentroidBounds = Union(classicCentroidBounds, primitiveInfo[i].centroid);
+                            int classicdim = classicCentroidBounds.MaximumExtent();
 
 
                             // Initialize _BucketInfo_ for SAH partition buckets
                             for (int i = start; i < end; ++i) {
                                 int b = nBuckets *
-                                        classiccentroidBounds.Offset(
+                                        classicCentroidBounds.Offset(
                                                 primitiveInfo[i].centroid)[classicdim];
                                 if (b == nBuckets) b = nBuckets - 1;
                                 CHECK_GE(b, 0);
@@ -309,9 +309,9 @@ namespace pbrt{
                             }
 
                             // Compute costs for splitting after each bucket
-                            Float classiccost[nBuckets - 1];
+                            Float classicCost[nBuckets - 1];
                             for (int i = 0; i < nBuckets - 1; ++i) {
-                                Bounds3f b0, b1;
+                                Bounds3f b0, b1, overlap;
                                 int count0 = 0, count1 = 0;
                                 for (int j = 0; j <= i; ++j) {
                                     b0 = Union(b0, buckets[j].bounds);
@@ -321,18 +321,20 @@ namespace pbrt{
                                     b1 = Union(b1, buckets[j].bounds);
                                     count1 += buckets[j].count;
                                 }
-                                classiccost[i] = 1 +
+                                // overlap = pbrt::Intersect(b0,b1);
+                                classicCost[i] = 1 +
                                           (count0 * b0.SurfaceArea() +
-                                           count1 * b1.SurfaceArea()) /
-                                          bounds.SurfaceArea();
+                                           count1 * b1.SurfaceArea() )
+                                   /*      + (count0 + count1) * overlap.SurfaceArea())*/
+                                   /   bounds.SurfaceArea();
                             }
 
                             // Find bucket to split at that minimizes SAH metric
-                            Float minCost = classiccost[0];
+                            Float minCost = classicCost[0];
                             int minCostSplitBucket = 0;
                             for (int i = 1; i < nBuckets - 1; ++i) {
-                                if (classiccost[i] < minCost) {
-                                    minCost = classiccost[i];
+                                if (classicCost[i] < minCost) {
+                                    minCost = classicCost[i];
                                     minCostSplitBucket = i;
                                 }
                             }
@@ -355,7 +357,7 @@ namespace pbrt{
                             // Compute costs for splitting after each bucket
                             Float pcacost[nBuckets - 1];
                             for (int i = 0; i < nBuckets - 1; ++i) {
-                                Bounds3f b0, b1;
+                                Bounds3f b0, b1, overlap;
                                 int count0 = 0, count1 = 0;
                                 for (int j = 0; j <= i; ++j) {
                                     b0 = Union(b0, pcabuckets[j].bounds);
@@ -365,10 +367,12 @@ namespace pbrt{
                                     b1 = Union(b1, pcabuckets[j].bounds);
                                     count1 += pcabuckets[j].count;
                                 }
+                               // overlap = pbrt::Intersect(b0,b1);
                                 pcacost[i] = 1 +
                                           (count0 * b0.SurfaceArea() +
-                                           count1 * b1.SurfaceArea()) /
-                                          bounds.SurfaceArea();
+                                           count1 * b1.SurfaceArea())
+                                           //+ (count0 + count1) * overlap.SurfaceArea())
+                                           /  bounds.SurfaceArea() ;
                             }
 
                             // Find bucket to split at that minimizes SAH metric
@@ -385,7 +389,7 @@ namespace pbrt{
                             // Either create leaf or split primitives at selected SAH
                             // bucket
                             Float leafCost = nPrimitives;
-                            if (nPrimitives > maxPrimsInNode || minCost < leafCost) {
+                            if (nPrimitives > maxPrimsInNode || minCost < leafCost || minCostPCA < leafCost) {
                                 if(minCostPCA<minCost){
                                     pcasahCalls++;
                                 } else {
@@ -395,7 +399,6 @@ namespace pbrt{
                                         &primitiveInfo[start], &primitiveInfo[end - 1] + 1,
                                         [=](const BVHPrimitiveInfo &pi) {
                                             if(minCostPCA<minCost){
-                                               // pcasahCalls++;
                                                 int b = nBuckets *
                                                         centroidBounds.Offset(pi.pcacentroid)[dim];
                                                 if (b == nBuckets) b = nBuckets - 1;
@@ -403,9 +406,8 @@ namespace pbrt{
                                                 CHECK_LT(b, nBuckets);
                                                 return b <= minCostSplitBucketPCA;
                                             } else{
-                                                //sahCalls++;
                                                 int b = nBuckets *
-                                                        classiccentroidBounds.Offset(pi.centroid)[classicdim];
+                                                        classicCentroidBounds.Offset(pi.centroid)[classicdim];
                                                 if (b == nBuckets) b = nBuckets - 1;
                                                 CHECK_GE(b, 0);
                                                 CHECK_LT(b, nBuckets);
@@ -462,7 +464,7 @@ namespace pbrt{
                             // Compute costs for splitting after each bucket
                             Float cost[nBuckets - 1];
                             for (int i = 0; i < nBuckets - 1; ++i) {
-                                Bounds3f b0, b1;
+                                Bounds3f b0, b1, c;
                                 int count0 = 0, count1 = 0;
                                 for (int j = 0; j <= i; ++j) {
                                     b0 = Union(b0, buckets[j].bounds);
