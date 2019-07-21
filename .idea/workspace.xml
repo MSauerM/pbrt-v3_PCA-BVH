@@ -3,25 +3,24 @@
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
       <config projectName="PBRT-V3" targetName="eLut" />
-      <config projectName="PBRT-V3" targetName="ExperimentalBuild" />
       <config projectName="PBRT-V3" targetName="ContinuousSubmit" />
       <config projectName="PBRT-V3" targetName="ftest" />
       <config projectName="PBRT-V3" targetName="IlmImf-obj" />
       <config projectName="PBRT-V3" targetName="ExperimentalMemCheck" />
       <config projectName="PBRT-V3" targetName="Iex" />
-      <config projectName="PBRT-V3" targetName="Ptex_static" />
+      <config projectName="PBRT-V3" targetName="stl_logging_unittest" />
       <config projectName="PBRT-V3" targetName="NightlyMemCheck" />
       <config projectName="PBRT-V3" targetName="ptxinfo" />
       <config projectName="PBRT-V3" targetName="ExperimentalUpdate" />
       <config projectName="PBRT-V3" targetName="toFloat" />
       <config projectName="PBRT-V3" targetName="glog" />
       <config projectName="PBRT-V3" targetName="ContinuousMemCheck" />
-      <config projectName="PBRT-V3" targetName="IlmThread" />
       <config projectName="PBRT-V3" targetName="NightlySubmit" />
       <config projectName="PBRT-V3" targetName="Imath" />
+      <config projectName="PBRT-V3" targetName="Nightly" />
       <config projectName="PBRT-V3" targetName="ContinuousStart" />
       <config projectName="PBRT-V3" targetName="halftest" />
-      <config projectName="PBRT-V3" targetName="logging_unittest" />
+      <config projectName="PBRT-V3" targetName="ExperimentalBuild" />
       <config projectName="PBRT-V3" targetName="IlmImf" />
       <config projectName="PBRT-V3" targetName="obj2pbrt" />
       <config projectName="PBRT-V3" targetName="NightlyConfigure" />
@@ -30,32 +29,33 @@
       <config projectName="PBRT-V3" targetName="dwaLookups" />
       <config projectName="PBRT-V3" targetName="rtest" />
       <config projectName="PBRT-V3" targetName="ExperimentalCoverage" />
-      <config projectName="PBRT-V3" targetName="wtest" />
       <config projectName="PBRT-V3" targetName="NightlyBuild" />
-      <config projectName="PBRT-V3" targetName="imgtool" />
       <config projectName="PBRT-V3" targetName="NightlyCoverage" />
-      <config projectName="PBRT-V3" targetName="Nightly" />
+      <config projectName="PBRT-V3" targetName="IlmThread" />
       <config projectName="PBRT-V3" targetName="ExperimentalStart" />
       <config projectName="PBRT-V3" targetName="ContinuousTest" />
       <config projectName="PBRT-V3" targetName="pbrt_test" />
       <config projectName="PBRT-V3" targetName="ContinuousCoverage" />
       <config projectName="PBRT-V3" targetName="symbolize_unittest" />
       <config projectName="PBRT-V3" targetName="Experimental" />
-      <config projectName="PBRT-V3" targetName="Continuous" />
+      <config projectName="PBRT-V3" targetName="logging_unittest" />
       <config projectName="PBRT-V3" targetName="signalhandler_unittest" />
-      <config projectName="PBRT-V3" targetName="Half" />
+      <config projectName="PBRT-V3" targetName="utilities_unittest" />
+      <config projectName="PBRT-V3" targetName="Continuous" />
+      <config projectName="PBRT-V3" targetName="imgtool" />
       <config projectName="PBRT-V3" targetName="pbrt_exe" />
       <config projectName="PBRT-V3" targetName="IexMath" />
       <config projectName="PBRT-V3" targetName="stacktrace_unittest" />
+      <config projectName="PBRT-V3" targetName="wtest" />
       <config projectName="PBRT-V3" targetName="ContinuousUpdate" />
-      <config projectName="PBRT-V3" targetName="stl_logging_unittest" />
       <config projectName="PBRT-V3" targetName="demangle_unittest" />
       <config projectName="PBRT-V3" targetName="bsdftest" />
       <config projectName="PBRT-V3" targetName="CopyIlmBaseLibs" />
-      <config projectName="PBRT-V3" targetName="NightlyTest" />
-      <config projectName="PBRT-V3" targetName="utilities_unittest" />
-      <config projectName="PBRT-V3" targetName="pbrt" />
       <config projectName="PBRT-V3" targetName="cyhair2pbrt" />
+      <config projectName="PBRT-V3" targetName="NightlyTest" />
+      <config projectName="PBRT-V3" targetName="Half" />
+      <config projectName="PBRT-V3" targetName="pbrt" />
+      <config projectName="PBRT-V3" targetName="Ptex_static" />
       <config projectName="PBRT-V3" targetName="ExperimentalConfigure" />
       <config projectName="PBRT-V3" targetName="ExperimentalSubmit" />
       <config projectName="PBRT-V3" targetName="ContinuousBuild" />
@@ -73,7 +73,6 @@
   <component name="ChangeListManager">
     <list default="true" id="774ebb14-fef8-4a85-af94-86c4b8fbe3e6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/accelerators/bvh_pca.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/accelerators/bvh_pca.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/../build_dir/" />
@@ -143,8 +142,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/accelerators/bvh_pca.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="349" column="47" lean-forward="true" selection-start-line="349" selection-start-column="47" selection-end-line="349" selection-end-column="47" />
+            <state relative-caret-position="480">
+              <caret line="206" column="30" lean-forward="true" selection-start-line="206" selection-start-column="30" selection-end-line="206" selection-end-column="30" />
               <folding>
                 <element signature="e#41#59#0" expanded="true" />
               </folding>
@@ -227,7 +226,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -255,6 +253,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -680,12 +679,13 @@
       <workItem from="1562714303770" duration="827000" />
       <workItem from="1562883736491" duration="3107000" />
       <workItem from="1562920000237" duration="4116000" />
-      <workItem from="1563058843258" duration="1099000" />
+      <workItem from="1563058843258" duration="1292000" />
+      <workItem from="1563724484593" duration="674000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61819000" />
+    <option name="totallyTimeSpent" value="62686000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -700,7 +700,7 @@
     <frame x="-1" y="0" width="1922" height="1053" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.09124867" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.092315905" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -830,8 +830,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/accelerators/bvh_pca.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="349" column="47" lean-forward="true" selection-start-line="349" selection-start-column="47" selection-end-line="349" selection-end-column="47" />
+        <state relative-caret-position="480">
+          <caret line="206" column="30" lean-forward="true" selection-start-line="206" selection-start-column="30" selection-end-line="206" selection-end-column="30" />
           <folding>
             <element signature="e#41#59#0" expanded="true" />
           </folding>
