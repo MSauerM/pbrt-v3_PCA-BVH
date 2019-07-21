@@ -8,15 +8,25 @@
       <config projectName="PBRT-V3" targetName="IlmImf-obj" />
       <config projectName="PBRT-V3" targetName="ExperimentalMemCheck" />
       <config projectName="PBRT-V3" targetName="Iex" />
+<<<<<<< HEAD
+      <config projectName="PBRT-V3" targetName="stl_logging_unittest" />
+=======
+>>>>>>> master
       <config projectName="PBRT-V3" targetName="NightlyMemCheck" />
       <config projectName="PBRT-V3" targetName="ptxinfo" />
       <config projectName="PBRT-V3" targetName="ExperimentalUpdate" />
       <config projectName="PBRT-V3" targetName="toFloat" />
       <config projectName="PBRT-V3" targetName="glog" />
       <config projectName="PBRT-V3" targetName="ContinuousMemCheck" />
+<<<<<<< HEAD
+      <config projectName="PBRT-V3" targetName="NightlySubmit" />
+      <config projectName="PBRT-V3" targetName="Imath" />
+      <config projectName="PBRT-V3" targetName="Nightly" />
+=======
       <config projectName="PBRT-V3" targetName="IlmThread" />
       <config projectName="PBRT-V3" targetName="NightlySubmit" />
       <config projectName="PBRT-V3" targetName="Imath" />
+>>>>>>> master
       <config projectName="PBRT-V3" targetName="ContinuousStart" />
       <config projectName="PBRT-V3" targetName="halftest" />
       <config projectName="PBRT-V3" targetName="ExperimentalBuild" />
@@ -28,10 +38,16 @@
       <config projectName="PBRT-V3" targetName="dwaLookups" />
       <config projectName="PBRT-V3" targetName="rtest" />
       <config projectName="PBRT-V3" targetName="ExperimentalCoverage" />
+<<<<<<< HEAD
+      <config projectName="PBRT-V3" targetName="NightlyBuild" />
+      <config projectName="PBRT-V3" targetName="NightlyCoverage" />
+      <config projectName="PBRT-V3" targetName="IlmThread" />
+=======
       <config projectName="PBRT-V3" targetName="wtest" />
       <config projectName="PBRT-V3" targetName="NightlyBuild" />
       <config projectName="PBRT-V3" targetName="NightlyCoverage" />
       <config projectName="PBRT-V3" targetName="Continuous" />
+>>>>>>> master
       <config projectName="PBRT-V3" targetName="ExperimentalStart" />
       <config projectName="PBRT-V3" targetName="ContinuousTest" />
       <config projectName="PBRT-V3" targetName="pbrt_test" />
@@ -41,12 +57,20 @@
       <config projectName="PBRT-V3" targetName="logging_unittest" />
       <config projectName="PBRT-V3" targetName="signalhandler_unittest" />
       <config projectName="PBRT-V3" targetName="utilities_unittest" />
+<<<<<<< HEAD
+      <config projectName="PBRT-V3" targetName="Continuous" />
+=======
       <config projectName="PBRT-V3" targetName="stl_logging_unittest" />
+>>>>>>> master
       <config projectName="PBRT-V3" targetName="imgtool" />
       <config projectName="PBRT-V3" targetName="pbrt_exe" />
       <config projectName="PBRT-V3" targetName="IexMath" />
       <config projectName="PBRT-V3" targetName="stacktrace_unittest" />
+<<<<<<< HEAD
+      <config projectName="PBRT-V3" targetName="wtest" />
+=======
       <config projectName="PBRT-V3" targetName="Nightly" />
+>>>>>>> master
       <config projectName="PBRT-V3" targetName="ContinuousUpdate" />
       <config projectName="PBRT-V3" targetName="demangle_unittest" />
       <config projectName="PBRT-V3" targetName="bsdftest" />
@@ -73,10 +97,13 @@
   <component name="ChangeListManager">
     <list default="true" id="774ebb14-fef8-4a85-af94-86c4b8fbe3e6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
+=======
       <change beforePath="$PROJECT_DIR$/src/accelerators/bvh.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/accelerators/bvh.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/accelerators/bvh.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/accelerators/bvh.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/accelerators/bvh_pca.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/accelerators/bvh_pca.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/accelerators/bvh_pca.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/accelerators/bvh_pca.h" afterDir="false" />
+>>>>>>> master
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/../build_dir/" />
@@ -90,6 +117,12 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
+        <entry file="file://$PROJECT_DIR$/src/accelerators/bvh_pca.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="570">
+              <caret line="38" selection-start-line="38" selection-end-line="38" />
+=======
         <entry file="file://$PROJECT_DIR$/src/accelerators/bvh.cpp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="11190">
@@ -106,6 +139,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="720">
               <caret line="48" selection-start-line="48" selection-end-line="48" />
+>>>>>>> master
             </state>
           </provider>
         </entry>
@@ -158,8 +192,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/accelerators/bvh_pca.cpp">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state relative-caret-position="480">
+              <caret line="206" column="30" lean-forward="true" selection-start-line="206" selection-start-column="30" selection-end-line="206" selection-end-column="30" />
+=======
             <state relative-caret-position="705">
               <caret line="213" column="43" selection-start-line="213" selection-start-column="43" selection-end-line="213" selection-end-column="43" />
+>>>>>>> master
               <folding>
                 <element signature="e#41#59#0" expanded="true" />
               </folding>
@@ -168,6 +207,18 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
+        <entry file="file://$PROJECT_DIR$/scenes/killeroo-pcacomb.pbrt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+=======
+>>>>>>> master
         <entry file="file://$PROJECT_DIR$/src/core/stats.h">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="2175">
@@ -199,6 +250,10 @@
       <find>cout</find>
       <find>traversal</find>
       <find>sumS</find>
+<<<<<<< HEAD
+      <find>cost</find>
+=======
+>>>>>>> master
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -214,14 +269,25 @@
         <option value="$PROJECT_DIR$/scenes/killeroo-distance.pbrt" />
         <option value="$PROJECT_DIR$/scenes/killeroo-pca.pbrt" />
         <option value="$PROJECT_DIR$/src/accelerators/bvh.h" />
+<<<<<<< HEAD
+        <option value="$PROJECT_DIR$/src/accelerators/bvh.cpp" />
+        <option value="$PROJECT_DIR$/src/accelerators/bvh_pca.h" />
+        <option value="$PROJECT_DIR$/scenes/killeroo-pcacomb.pbrt" />
+=======
         <option value="$PROJECT_DIR$/src/accelerators/bvh_pca.h" />
         <option value="$PROJECT_DIR$/src/accelerators/bvh.cpp" />
+>>>>>>> master
         <option value="$PROJECT_DIR$/src/accelerators/bvh_pca.cpp" />
       </list>
     </option>
   </component>
+<<<<<<< HEAD
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-1" />
+=======
   <component name="ProjectFrameBounds" extendedState="4">
     <option name="x" value="959" />
+>>>>>>> master
     <option name="width" value="961" />
     <option name="height" value="1053" />
   </component>
@@ -231,7 +297,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+<<<<<<< HEAD
+=======
       <pane id="Scope" />
+>>>>>>> master
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -259,6 +328,10 @@
           <select />
         </subPane>
       </pane>
+<<<<<<< HEAD
+      <pane id="Scope" />
+=======
+>>>>>>> master
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -268,13 +341,22 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
+<<<<<<< HEAD
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/scenes" />
+    </key>
+=======
+>>>>>>> master
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src" />
     </key>
+<<<<<<< HEAD
+=======
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/scenes" />
     </key>
+>>>>>>> master
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -680,11 +762,24 @@
       <workItem from="1562190356750" duration="6084000" />
       <workItem from="1562407422387" duration="6622000" />
       <workItem from="1562533073960" duration="1695000" />
+<<<<<<< HEAD
+      <workItem from="1562593312389" duration="6058000" />
+      <workItem from="1562714303770" duration="827000" />
+      <workItem from="1562883736491" duration="3107000" />
+      <workItem from="1562920000237" duration="4116000" />
+      <workItem from="1563058843258" duration="1292000" />
+      <workItem from="1563724484593" duration="674000" />
+=======
+>>>>>>> master
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
+    <option name="totallyTimeSpent" value="62686000" />
+=======
     <option name="totallyTimeSpent" value="46612000" />
+>>>>>>> master
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -696,9 +791,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
+    <frame x="-1" y="0" width="1922" height="1053" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.092315905" />
+=======
     <frame x="960" y="0" width="961" height="1053" extended-state="4" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17415115" />
+>>>>>>> master
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -710,7 +812,11 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32975295" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
       <window_info anchor="bottom" id="Messages" order="8" weight="0.32975295" />
+<<<<<<< HEAD
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.21374866" />
+=======
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.42427498" />
+>>>>>>> master
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="11" weight="0.32975295" />
       <window_info anchor="bottom" id="CMake" order="12" weight="0.32975295" />
@@ -765,8 +871,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/accelerators/bvh_pca.h">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="570">
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
+=======
         <state relative-caret-position="720">
           <caret line="48" selection-start-line="48" selection-end-line="48" />
+>>>>>>> master
         </state>
       </provider>
     </entry>
@@ -805,6 +916,16 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/scenes/killeroo-pcacomb.pbrt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+=======
+>>>>>>> master
     <entry file="file://$PROJECT_DIR$/src/core/stats.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2175">
@@ -821,8 +942,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/accelerators/bvh_pca.cpp">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="480">
+          <caret line="206" column="30" lean-forward="true" selection-start-line="206" selection-start-column="30" selection-end-line="206" selection-end-column="30" />
+=======
         <state relative-caret-position="705">
           <caret line="213" column="43" selection-start-line="213" selection-start-column="43" selection-end-line="213" selection-end-column="43" />
+>>>>>>> master
           <folding>
             <element signature="e#41#59#0" expanded="true" />
           </folding>

@@ -19,7 +19,7 @@ namespace pbrt{
 
     class PCAAccel: public Aggregate{
         public:
-        enum class SplitMethod {SAH, Middle};
+        enum class SplitMethod {SAH, Middle, SAHCOMB};
 
         PCAAccel(std::vector<std::shared_ptr<Primitive>> p, int maxPrimsInNode = 1,
                 SplitMethod splitMethod = SplitMethod::Middle, bool isOptimized=false);
