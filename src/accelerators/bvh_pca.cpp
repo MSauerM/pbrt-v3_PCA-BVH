@@ -464,7 +464,9 @@ namespace pbrt{
                             // Compute costs for splitting after each bucket
                             Float cost[nBuckets - 1];
                             for (int i = 0; i < nBuckets - 1; ++i) {
+
                                 Bounds3f b0, b1, c;
+
                                 int count0 = 0, count1 = 0;
                                 for (int j = 0; j <= i; ++j) {
                                     b0 = Union(b0, buckets[j].bounds);
